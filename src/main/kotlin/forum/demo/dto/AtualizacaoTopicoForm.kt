@@ -3,13 +3,11 @@ package forum.demo.dto
 import jakarta.validation.constraints.NotEmpty
 import jakarta.validation.constraints.NotNull
 
-data class NovoTopicoForm(
+data class AtualizacaoTopicoForm(
+    @field:NotNull
+    val id: Long,
     @field:NotEmpty
     val titulo: String,
     @field:NotEmpty
-    val mensagem: String,
-    @field:NotNull
-    val idCurso: Long,
-    @field:NotNull
-    val idAutor: Long
+    val mensagem: String
 )
